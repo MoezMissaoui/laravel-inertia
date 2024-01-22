@@ -1,23 +1,19 @@
 <template>
-    <div class="grid grid-cols-2">
-        <div class="col-span-1">
+    <MainLayout>
+        <div class="container mx-auto px-4">
             <h1 class="text-3xl font-bold underline mb-5">
                 {{ message }}
             </h1>
         </div>
-        <div class="col-span-1">
-            <Link href="/"> Index Page </Link>
-        </div>
-    </div>
+    </MainLayout>
 </template>
 
 <script setup>
-    import { Link } from "@inertiajs/vue3";
-
-    defineProps({
-        message: {
-            type: String,
-            required: true
-        }
-    })
+import MainLayout from "../../Layouts/MainLayout.vue";
+defineProps({
+    message: {
+        type: String,
+        required: true,
+    },
+});
 </script>
